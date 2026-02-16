@@ -42,19 +42,19 @@ export default function ReportBug() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-3 sm:p-4 md:p-8">
+    <div className="min-h-screen bg-gray-800 p-3 sm:p-4 md:p-8">
       <div className="max-w-2xl mx-auto">
         {/* Header with Back Arrow */}
         <div className="mb-6 flex items-center gap-3">
           <button
             onClick={goBack}
-            className="p-2 rounded-full bg-white hover:bg-gray-100 shadow transition flex-shrink-0"
+            className="p-2 rounded-full bg-blue-200 hover:bg-blue-300 shadow transition flex-shrink-0"
           >
-            <ArrowLeft size={20} className="text-gray-700" />
+            <ArrowLeft size={20} className="text-gray-700 p-0 " />
           </button>
           <div className="flex items-center gap-2 flex-1 min-w-0">
             <Bug size={24} className="text-red-500 flex-shrink-0" />
-            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 truncate">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-50 truncate">
               Report a Bug
             </h1>
           </div>
@@ -70,8 +70,8 @@ export default function ReportBug() {
         )}
 
         {/* Bug Report Form */}
-        <div className="bg-white rounded-xl shadow border p-4 sm:p-6">
-          <p className="text-gray-600 mb-4 text-sm sm:text-base">
+        <div className="bg-purple-100 rounded-xl shadow border p-4 sm:p-6">
+          <p className="text-gray-800 mb-4 text-sm sm:text-base">
             Found a bug? Let us know and we'll fix it as soon as possible!
           </p>
 
@@ -79,7 +79,7 @@ export default function ReportBug() {
             {/* Bug Title */}
             <div>
               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                Bug Title <span className="text-red-500">*</span>
+                Bug Title <span className="text-red-600">*</span>
               </label>
               <input
                 type="text"
@@ -135,8 +135,8 @@ export default function ReportBug() {
         </div>
 
         {/* Additional Info */}
-        <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-blue-50 border border-blue-200 rounded-xl">
-          <p className="text-sm font-semibold text-blue-800 mb-2">
+        <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-blue-100 border border-blue-200 rounded-xl">
+          <p className="text-sm font-semibold text-blue-900 mb-2">
             Tips for a good bug report:
           </p>
           <ul className="text-xs sm:text-sm text-blue-700 space-y-1 ml-4">

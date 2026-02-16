@@ -33,13 +33,13 @@ export default function Settings() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 p-4 md:p-8">
+    <div className="min-h-screen bg-gray-800 p-4 md:p-8">
       <div className="max-w-2xl mx-auto">
         {/* Header with Back Arrow */}
         <div className="mb-8 flex items-center gap-4">
           <button
             onClick={goBack}
-            className="p-2 rounded-full bg-white hover:bg-gray-100 shadow transition"
+            className="p-2 rounded-full bg-blue-200 hover:bg-blue-300 shadow transition"
           >
             <ArrowLeft size={24} className="text-gray-700" />
           </button>
@@ -47,10 +47,10 @@ export default function Settings() {
         </div>
 
         {/* Required Attendance Card */}
-        <div className="bg-white border-gray-200 rounded-xl shadow border p-6">
+        <div className="bg-blue-200 border-gray-200 rounded-xl shadow border p-6">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
-              <div className="text-5xl font-bold text-indigo-600">%</div>
+              <div className="text-5xl font-bold text-blue-400">%</div>
               <h2 className="text-xl font-semibold text-gray-800">
                 Required Attendance
               </h2>
@@ -59,9 +59,9 @@ export default function Settings() {
             {!isEditing ? (
               <button
                 onClick={() => setIsEditing(true)}
-                className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition"
+                className="p-2 rounded-lg bg-blue-100 hover:bg-blue-200 transition"
               >
-                <Edit2 size={20} className="text-gray-700" />
+                <Edit2 size={20} className="text-gray-800" />
               </button>
             ) : (
               <button
@@ -76,8 +76,8 @@ export default function Settings() {
           {/* Percentage Display/Input */}
           <div className="mt-4">
             {!isEditing ? (
-              <div className="text-center p-6 rounded-lg bg-indigo-50">
-                <p className="text-6xl font-bold text-indigo-600">
+              <div className="text-center p-6 rounded-full bg-blue-300">
+                <p className="text-6xl font-bold text-gray-600">
                   {requiredAttendance}%
                 </p>
               </div>
@@ -89,7 +89,7 @@ export default function Settings() {
                   onChange={(e) => setTempValue(parseInt(e.target.value) || 0)}
                   min="0"
                   max="100"
-                  className="flex-1 text-center text-4xl font-bold p-4 rounded-lg border-2 bg-white border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="flex-1 text-center text-4xl font-bold p-4 rounded-lg border-2 bg-blue-100 border-gray-300 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 />
                 <span className="text-4xl font-bold text-gray-700">%</span>
               </div>

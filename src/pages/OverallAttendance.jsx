@@ -132,19 +132,19 @@ export default function OverallAttendance() {
       </style>
 
       {/* HEADER */}
-      <div className="bg-blue-300 flex items-center px-2 h-3 pt-9 relative">
-        <button onClick={() => navigate("/")} className="p-3 pl-2">
-          <i className="ri-arrow-left-long-fill text-4xl text-white"></i>
+      <div className="bg-blue-300 flex items-center px-2 h-3 pt-9 pb-10 relative">
+        <button onClick={() => navigate("/")} className="p-1 pl-2 bg-blue-200 rounded-full hover:bg-blue-400">
+          <i className="ri-arrow-left-long-fill text-4xl text-gray"></i>
         </button>
-        <p className="absolute left-1/2 -translate-x-1/2 text-xl font-semibold text-white">
+        <p className="absolute left-1/2 -translate-x-1/2 text-xl font-semibold text-gray">
           Overall Attendance
         </p>
       </div>
 
-      <div className="min-h-screen bg-gray-900 flex flex-col items-center">
-        <div className={`w-full ${noSubjects ? "h-20" : "h-28"} bg-blue-300`} />
+      <div className="min-h-screen bg-gray-900 flex flex-col items-center ">
+        <div className={`w-full ${noSubjects ? "h-20" : "h-28"}`} />
 
-        <div className="mt-5">
+        <div className="">
           <div className="water-container">
             <div className="water-fill" style={{ height: `${percentage}%` }}>
               <div className="percent-display">{percentage}%</div>

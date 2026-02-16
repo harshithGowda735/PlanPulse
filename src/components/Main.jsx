@@ -113,8 +113,8 @@ const Main = () => {
 
   if (isLoading) {
     return (
-      <main className="min-h-screen bg-gray-800 flex items-center justify-center">
-        <p className="text-gray-300">Loading...</p>
+      <main className="min-h-screen bg-gray-900 flex items-center justify-center">
+        <p className="text-gray-200">Loading...</p>
       </main>
     );
   }
@@ -123,7 +123,7 @@ const Main = () => {
     <main className="min-h-screen bg-gray-800 overflow-hidden flex flex-col">
       
       {todaySubjects.length === 0 && (
-        <div className='flex justify-center mt-20 mb-6'>
+        <div className='flex justify-center mt-24 mb-7'>
           <img src={logo1} alt="" className="h-32 sm:h-40" />
         </div>
       )}
@@ -162,30 +162,30 @@ const Main = () => {
                       </div>
                     )}
 
-                    <div className="flex gap-1.5 sm:gap-2">
+                    <div className="flex gap-1.5 sm:gap-2 ">
                       <button
                         onClick={() => markTodayAttendance(subject.id, "Present")}
-                        className={`flex-1 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold transition ${
+                        className={`flex-1  py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold transition ${
                           status === "Present"
-                            ? "bg-green-600 text-white"
-                            : "bg-gray-600 text-gray-200 hover:bg-green-500"
+                            ? "bg-green-500 text-gray"
+                            : "bg-gray-800 text-gray-200 hover:bg-green-500"
                         }`}
                       >
                         Present
                       </button>
                       <button
                         onClick={() => markTodayAttendance(subject.id, "Absent")}
-                        className={`flex-1 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold transition ${
+                        className={`flex-1  py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold transition ${
                           status === "Absent"
-                            ? "bg-red-600 text-white"
-                            : "bg-gray-600 text-gray-200 hover:bg-red-500"
+                            ? "bg-red-700 text-gray"
+                            : "bg-gray-600 text-gray-200 hover:bg-red-700"
                         }`}
                       >
                         Absent
                       </button>
                       <button
                         onClick={() => markTodayAttendance(subject.id, "No Class")}
-                        className="flex-1 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold bg-gray-600 text-gray-200 hover:bg-gray-500 transition"
+                        className="flex-1 py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold bg-gray-600 text-gray-200 hover:bg-yellow-500 transition"
                       >
                         No Class
                       </button>
