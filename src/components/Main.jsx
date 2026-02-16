@@ -168,7 +168,7 @@ const Main = () => {
                         className={`flex-1  py-1.5 sm:py-2 rounded-lg text-xs sm:text-sm font-semibold transition ${
                           status === "Present"
                             ? "bg-green-500 text-gray"
-                            : "bg-gray-800 text-gray-200 hover:bg-green-500"
+                            : "bg-gray-600 text-gray-200 hover:bg-green-500"
                         }`}
                       >
                         Present
@@ -198,17 +198,26 @@ const Main = () => {
         )}
       </div>
 
-      <div className="fixed bottom-20 left-0 right-0 flex justify-center pointer-events-none">
-        {!isThere && (
-          <button
-            onClick={() => setIsThere(true)}
-            className="rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3 bg-gray-700 text-gray-100 hover:bg-gray-600 cursor-pointer flex gap-2 items-center shadow-lg text-sm sm:text-base pointer-events-auto"
-          >
-            <i className="ri-add-line text-lg"></i>
-            Add Extra Class
-          </button>
-        )}
-      </div>
+    {/* Floating Add Button */}
+<div className="fixed bottom-20 left-0 right-0 flex justify-center pointer-events-none">
+  {!isThere && (
+    <button
+      onClick={() => setIsThere(true)}
+      className="rounded-2xl px-4 sm:px-6 py-2.5 sm:py-3 bg-gray-700 text-gray-100 hover:bg-gray-600 cursor-pointer flex gap-2 items-center shadow-lg text-sm sm:text-base pointer-events-auto"
+    >
+      <i className="ri-add-line text-lg"></i>
+      Add Extra Class
+    </button>
+  )}
+</div>
+
+{/* Mobile Footer Only */}
+<footer className="fixed bottom-0 left-0 w-full bg--900 text-white text-center py-3 sm:hidden">
+  <p className="text-sm">
+    © 2026 Attendance Tracker • Innov8x
+  </p>
+</footer>
+
 
       <div
         ref={dropdownRef}
