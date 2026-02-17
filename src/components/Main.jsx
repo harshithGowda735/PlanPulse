@@ -214,7 +214,7 @@ const Main = () => {
 {/* Mobile Footer Only */}
 <footer className="fixed bottom-0 left-0 w-full bg--900 text-white text-center py-3 sm:hidden">
   <p className="text-sm">
-    © 2026 Attendance Tracker • Innov8x
+     © 2026 All Rights Reserved • Harshith
   </p>
 </footer>
 
